@@ -55,6 +55,6 @@ Before reporting any development task as complete, you **MUST** ensure the follo
 1. **Session Start:** Never trust plan text descriptions of "what's done". Verify against the actual repository state first by running `git status` and `git log --oneline -5`.
 2. **Session End:** Ensure all completed work is fully verified, and when recording progress in memory, always include the Git commit hash (e.g., `- Feature X — committed abc1234 ✓`).
 3. **Important Hardware Defaults:**
-   - **Videohub:** `172.16.240.93` (TCP: 9990)
-   - **ATEM Constellation 8K:** `172.16.240.94`
+   - **Videohub:** `192.168.1.100` (TCP: 9990)
+   - **ATEM Constellation 8K:** `192.168.1.101`
    - *These can be overridden via `VIDEOHUB_IP`, `ATEM_IP`, or `DISABLE_ATEM=1` environment variables.*

@@ -64,8 +64,8 @@ export async function startServer(dbPath: string, port = DEFAULT_PORT): Promise<
   // Seed default devices on first run if DB is empty
   let devices = db.listDevices();
   if (devices.length === 0) {
-    const vhIp = process.env.VIDEOHUB_IP || '172.16.240.93';
-    const atemIp = process.env.ATEM_IP || '172.16.240.94';
+    const vhIp = process.env.VIDEOHUB_IP || '192.168.1.100';
+    const atemIp = process.env.ATEM_IP || '192.168.1.101';
     db.addDevice({ type: 'videohub', name: 'Videohub', ip: vhIp });
     db.addDevice({ type: 'atem', name: 'ATEM', ip: atemIp });
     devices = db.listDevices();

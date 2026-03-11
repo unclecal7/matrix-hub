@@ -96,8 +96,8 @@ Never skip verification to save time.
 
 ## Hardware Defaults
 
-- **Videohub:** 172.16.240.93 (TCP:9990, 120x120)
-- **ATEM Constellation 8K:** 172.16.240.94 (24 AUX outputs, ~110 inputs)
+- **Videohub:** 192.168.1.100 (TCP:9990, 120x120)
+- **ATEM Constellation 8K:** 192.168.1.101 (24 AUX outputs, ~110 inputs)
 - Override with env vars: `VIDEOHUB_IP`, `ATEM_IP`, `DISABLE_ATEM=1`
 
 ## Conventions
