@@ -19,12 +19,16 @@ The project lives at `matrix-hub/` nested inside `Matrix Hub/` to avoid `better-
 
 ```bash
 npx tsc --noEmit                      # type-check (no emit)
-npx vitest run                        # run all tests once
+npm run test:run                      # run all unit tests once
 npx vitest run tests/unit/database.test.ts  # run a single test file
-npx vitest                            # watch mode
-npx eslint src/                       # lint
-npx prettier --write "src/**/*.{ts,tsx}"  # format
-MATRIX_SIZE=16 npx tsx tests/simulator/videohub-simulator.ts  # run simulator standalone
+npm test                              # unit tests in watch mode
+npm run test:e2e                      # Playwright E2E tests (requires services running)
+npm run test:e2e:ui                   # Playwright with interactive UI
+./scripts/verify-ui.command           # full E2E verification (starts simulator + backend automatically)
+npm run lint                          # ESLint
+npm run format                        # Prettier
+MATRIX_SIZE=16 npm run simulate:videohub  # run Videohub simulator standalone
+npm run start:prod                    # production server (serves built frontend at :8080)
 ```
 ## Session Start Protocol
 
@@ -93,6 +97,19 @@ Never skip verification to save time.
 | Components | `src/renderer/components/` |
 | Launch (live) | `dev.command` |
 | Launch (sim) | `dev-sim.command` |
+
+## Electron Build
+
+```bash
+npm run electron:dev     # build all + rebuild better-sqlite3 for Electron ABI + launch
+npm run package:mac      # create .dmg (arm64)
+npm run electron:rebuild # manually rebuild better-sqlite3 for Electron ABI (130)
+npm rebuild better-sqlite3  # restore Node.js ABI (127) after Electron dev, needed for vitest
+```
+
+**ABI mismatch gotcha:** Electron 33 uses ABI 130; Node.js v22 uses ABI 127. After running `electron:dev`, run `npm rebuild better-sqlite3` before running unit tests, or vitest will fail with a native module ABI error. `electron-builder` (`package:mac`) handles this automatically. Never add `electron-rebuild` to `postinstall` — it breaks vitest.
+
+Electron entry: `src/main/main.ts` → compiled to `dist/main/main/main.js`. Uses `STATIC_ROOT` env var (set before `startServer`) to locate built frontend assets at `dist/renderer/`.
 
 ## Hardware Defaults
 

@@ -1,0 +1,72 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+labels: [bug]
+body:
+  - type: dropdown
+    id: device_type
+    attributes:
+      label: Device type
+      description: Which hardware is affected?
+      options:
+        - Videohub 120x120
+        - ATEM Constellation 8K
+        - Both
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: firmware_version
+    attributes:
+      label: Hardware firmware version
+      placeholder: e.g. 8.6.4
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly and concisely.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Click on ...
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+    validations:
+      required: true
+
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      description: From the About dialog or DMG filename (e.g. v1.2.0)
+    validations:
+      required: true
+
+  - type: input
+    id: os_version
+    attributes:
+      label: macOS version
+      placeholder: e.g. macOS 15.3 Sequoia
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console logs (optional)
+      description: Paste any relevant output from Electron DevTools or the terminal.
+      render: text
