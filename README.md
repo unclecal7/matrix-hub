@@ -36,6 +36,26 @@ After running these commands, the app will open normally.
 
 ---
 
+## How to Use Matrix Hub
+
+### Connecting to a Device
+1. Open the Matrix Hub app and click on the **Settings** tab at the top.
+2. Under "Devices", select the type of hardware you are connecting to (Videohub or ATEM).
+3. Enter a friendly **Name** and the **IP Address** of the device.
+4. Click **Add Device**.
+5. The device will appear in the list. Wait for the status indicator to turn green (Connected).
+   - *Note on ATEM Connections:* ATEM switchers communicate over UDP, which can take a second or two to perform its initial handshake. If you enter the wrong IP, the status will stay grey/disconnected. Simply edit the IP address and click save to try again.
+
+### Saving and Recalling Presets
+Presets allow you to save the entire routing state of your matrix and recall it instantly with a single click.
+1. Go to the main **Videohub** routing grid tab.
+2. Set up your routes exactly how you want them by clicking the grid intersections.
+3. Open the **Presets** panel (look for the list/bookmark icon).
+4. Click **"Save New Preset"**, give it a name, and save.
+5. To recall it later, simply open the Presets panel and click **Recall** on your saved preset.
+
+---
+
 ## Bitfocus Buttons Integration
 
 If you are using Bitfocus Buttons, it is easiest to import the pre-built module package:
@@ -62,6 +82,11 @@ If you are using the full Bitfocus Companion software, you can use the Developer
    - Set the Target IP to `127.0.0.1` (if running on the same machine).
    - Set the Port to `8080` (this is Matrix Hub's API port).
 
+### Using the Companion Module Actions
+Once connected to Companion or Buttons, you can drag Matrix Hub actions onto your Stream Deck:
+- **Change Route:** Instantly route a specific input to a specific output.
+- **Recall Preset:** Trigger one of the presets you previously saved in the Matrix Hub app.
+
 ---
 
 ## Local Development
@@ -80,3 +105,10 @@ To build your own `.dmg`:
 ```bash
 npm run package:mac
 ```
+
+---
+
+## Feedback, Bugs, and Feature Requests
+
+Did you find a bug or have a great idea for a new feature? 
+Please [open an Issue on GitHub](https://github.com/unclecal7/matrix-hub/issues) to let me know!

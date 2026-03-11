@@ -122,6 +122,7 @@ export async function buildServer(
     if (!existing) return reply.code(404).send({ error: 'Device not found' });
 
     const ipChanged = ip && ip !== existing.ip;
+    const nameChanged = name && name !== existing.name;
     db.updateDevice(id, { name, ip });
 
     if (ipChanged) {
@@ -133,6 +134,9 @@ export async function buildServer(
       } else {
         stateManager.registerAtem(id, updated.ip, updated.name);
       }
+    } else if (nameChanged) {
+      const deviceState = stateManager.getDeviceState(id);
+      if (deviceState) deviceState.name = name;
     }
 
     const updatedState = stateManager.getDeviceState(id);
