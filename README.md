@@ -54,6 +54,14 @@ Presets allow you to save the entire routing state of your matrix and recall it 
 4. Click **"Save New Preset"**, give it a name, and save.
 5. To recall it later, simply open the Presets panel and click **Recall** on your saved preset.
 
+### Changing ATEM Labels via XML
+If you want to rename your ATEM inputs and outputs so they show up correctly in Matrix Hub, you must do this through the official Blackmagic ATEM Software Control application.
+1. Open the **ATEM Software Control** app on your computer.
+2. Click the **Gear Icon (Settings)** in the bottom left, navigate to **Labels**, and change them there.
+3. *Alternatively, for bulk edits:* Go to **File -> Save As...**, ensure **Labels** is checked, and export the `.xml` file.
+4. Open that `.xml` file in a text editor, edit the labels, and then go to **File -> Restore...** in the ATEM Software Control to push the changes back to the hardware.
+5. Matrix Hub will instantly detect the changes and update its UI automatically!
+
 ---
 
 ## Bitfocus Buttons Integration
