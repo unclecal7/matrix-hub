@@ -36,6 +36,23 @@ After running these commands, the app will open normally.
 
 ---
 
+## Bitfocus Companion / Buttons Integration
+
+You can control Matrix Hub directly from your Stream Deck! 
+
+1. Download the `Matrix-Hub-Companion-Module.zip` file from the [Releases page](https://github.com/unclecal7/matrix-hub/releases/latest).
+2. **Unzip** the downloaded file. Inside, you will find a folder named `pkg`.
+3. Open the Bitfocus Companion/Buttons Admin Web GUI.
+4. Click on the **Settings** (gear icon) in the launcher or go to the Settings tab in the web interface.
+5. Scroll down to **Developer Modules path**.
+6. Select the exact folder *that contains* the `pkg` folder (do not select the `pkg` folder itself, select its parent folder that you just unzipped).
+7. Ensure **Enable Developer Modules** is turned ON.
+8. Go to the **Connections** tab, search for "Matrix Hub", and add it!
+   - Set the Target IP to `127.0.0.1` (if running on the same machine).
+   - Set the Port to `8080` (this is Matrix Hub's API port, do not confuse it with the 12321 OSC port).
+
+---
+
 ## Local Development
 
 If you'd like to build and run the project from source:
