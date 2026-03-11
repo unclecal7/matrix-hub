@@ -1,0 +1,112 @@
+<h2>Item 1 — Input Groups Sidebar</h2>
+<p class="subtitle">The filtering already works. The question is: should the sidebar UI match output groups (flat) or stay as-is (nested)?</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">Current — Input Groups (nested)</div>
+    <div class="mockup-body" style="padding: 12px; font-family: monospace; font-size: 12px; background: #1a1a2e;">
+      <div style="color: #888; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+        Input Groups
+        <span style="border: 1px solid #333; border-radius: 3px; padding: 0 4px; font-size: 9px; color: #555; cursor: pointer;">+</span>
+      </div>
+      <!-- Auto Generated collapsible header -->
+      <div style="display: flex; align-items: center; gap: 6px; padding: 4px 8px; cursor: pointer; opacity: 0.7; border-radius: 3px;">
+        <span style="font-size: 10px; color: #aaa; letter-spacing: 0.05em;">Auto Generated</span>
+        <span style="color: #666; font-size: 10px; margin-left: auto;">62</span>
+        <span style="color: #555;">▾</span>
+      </div>
+      <!-- Nested auto groups -->
+      <div style="padding-left: 20px;">
+        <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.3); margin-bottom: 2px;">
+          <div style="width: 8px; height: 8px; border-radius: 50%; background: #6366f1; flex-shrink: 0;"></div>
+          <span style="font-size: 11px; color: #e0e0e0;">Physical Inputs</span>
+          <span style="color: #555; font-size: 10px; margin-left: auto;">20</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; margin-bottom: 2px;">
+          <div style="width: 8px; height: 8px; border-radius: 50%; background: #f59e0b; flex-shrink: 0;"></div>
+          <span style="font-size: 11px; color: #aaa;">ME Outputs</span>
+          <span style="color: #555; font-size: 10px; margin-left: auto;">4</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; margin-bottom: 2px;">
+          <div style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; flex-shrink: 0;"></div>
+          <span style="font-size: 11px; color: #aaa;">Media Players</span>
+          <span style="color: #555; font-size: 10px; margin-left: auto;">4</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; margin-bottom: 2px;">
+          <div style="width: 8px; height: 8px; border-radius: 50%; background: #ec4899; flex-shrink: 0;"></div>
+          <span style="font-size: 11px; color: #aaa;">SuperSource</span>
+          <span style="color: #555; font-size: 10px; margin-left: auto;">2</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; margin-bottom: 2px;">
+          <div style="width: 8px; height: 8px; border-radius: 50%; background: #64748b; flex-shrink: 0;"></div>
+          <span style="font-size: 11px; color: #aaa;">Utility</span>
+          <span style="color: #555; font-size: 10px; margin-left: auto;">6</span>
+        </div>
+      </div>
+      <!-- Custom group at top level -->
+      <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; margin-top: 4px;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #06b6d4; flex-shrink: 0;"></div>
+        <span style="font-size: 11px; color: #aaa;">Studio A Cameras</span>
+        <span style="color: #555; font-size: 10px; margin-left: auto;">6</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">Proposed — Input Groups (flat, like outputs)</div>
+    <div class="mockup-body" style="padding: 12px; font-family: monospace; font-size: 12px; background: #1a1a2e;">
+      <div style="color: #888; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+        Input Groups
+        <span style="border: 1px solid #333; border-radius: 3px; padding: 0 4px; font-size: 9px; color: #555; cursor: pointer;">+</span>
+      </div>
+      <!-- All groups flat -->
+      <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.3); margin-bottom: 2px;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #6366f1; flex-shrink: 0;"></div>
+        <span style="font-size: 11px; color: #e0e0e0;">Physical Inputs</span>
+        <span style="color: #555; font-size: 10px; margin-left: auto;">20</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; margin-bottom: 2px;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #f59e0b; flex-shrink: 0;"></div>
+        <span style="font-size: 11px; color: #aaa;">ME Outputs</span>
+        <span style="color: #555; font-size: 10px; margin-left: auto;">4</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; margin-bottom: 2px;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #10b981; flex-shrink: 0;"></div>
+        <span style="font-size: 11px; color: #aaa;">Media Players</span>
+        <span style="color: #555; font-size: 10px; margin-left: auto;">4</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; margin-bottom: 2px;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #ec4899; flex-shrink: 0;"></div>
+        <span style="font-size: 11px; color: #aaa;">SuperSource</span>
+        <span style="color: #555; font-size: 10px; margin-left: auto;">2</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; margin-bottom: 2px;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #64748b; flex-shrink: 0;"></div>
+        <span style="font-size: 11px; color: #aaa;">Utility</span>
+        <span style="color: #555; font-size: 10px; margin-left: auto;">6</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; padding: 3px 8px; cursor: pointer; border-radius: 3px; margin-top: 2px;">
+        <div style="width: 8px; height: 8px; border-radius: 50%; background: #06b6d4; flex-shrink: 0;"></div>
+        <span style="font-size: 11px; color: #aaa;">Studio A Cameras</span>
+        <span style="color: #555; font-size: 10px; margin-left: auto;">6</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="options" style="margin-top: 16px;">
+  <div class="option" data-choice="flat" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Flat (proposed)</h3>
+      <p>Remove the "Auto Generated" collapsible header. All input groups show at the same level as output groups — consistent, one less click to get to auto groups.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="keep" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Keep nesting</h3>
+      <p>Auto-generated groups stay collapsed under the "Auto Generated" header. Custom groups stay at top level. Cleaner when you have lots of auto-generated categories.</p>
+    </div>
+  </div>
+</div>

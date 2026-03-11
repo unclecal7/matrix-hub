@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile majorVersion="4" minorVersion="1" product="ATEM Constellation 8K">
+  <Settings>
+    <Outputs>
+      <Output id="8001" shortName="OUT1" longName="OUT 1 - ME1"/>
+      <Output id="8002" shortName="OUT2" longName="OUT 2 - ME2"/>
+      <Output id="8003" shortName="OUT3" longName="OUT 3 - ME3"/>
+      <Output id="8004" shortName="OUT4" longName="OUT 4 - ME4"/>
+      <Output id="8005" shortName="OUT5" longName="OUT 5 - Multiview 1"/>
+      <Output id="8006" shortName="OUT6" longName="OUT 6 - Multiview 2"/>
+      <Output id="8007" shortName="OUT7" longName="OUT 7 - Record"/>
+      <Output id="8008" shortName="OUT8" longName="OUT 8 - Stream"/>
+      <Output id="8009" shortName="OUT9" longName="OUT 9 - Confidence"/>
+      <Output id="8010" shortName="OT10" longName="OUT 10 - Green Room"/>
+      <Output id="8011" shortName="OT11" longName="OUT 11 - Lobby Display"/>
+      <Output id="8012" shortName="OT12" longName="OUT 12 - Control Room"/>
+      <Output id="8013" shortName="OT13" longName="OUT 13 - Spare"/>
+      <Output id="8014" shortName="OT14" longName="OUT 14 - Spare 2"/>
+      <Output id="8015" shortName="OT15" longName="OUT 15 - Media"/>
+      <Output id="8016" shortName="OT16" longName="OUT 16 - LED Wall"/>
+      <Output id="8017" shortName="OT17" longName="OUT 17 - FOH"/>
+      <Output id="8018" shortName="OT18" longName="OUT 18 - Backstage"/>
+      <Output id="8019" shortName="OT19" longName="OUT 19 - Archive"/>
+      <Output id="8020" shortName="OT20" longName="OUT 20 - HotSpare"/>
+      <Output id="8021" shortName="OT21" longName="OUT 21 - IMAG Left"/>
+      <Output id="8022" shortName="OT22" longName="OUT 22 - IMAG Right"/>
+      <Output id="8023" shortName="OT23" longName="OUT 23 - IMAG Center"/>
+      <Output id="8024" shortName="OT24" longName="OUT 24 - Director"/>
+    </Outputs>
+  </Settings>
+</Profile>

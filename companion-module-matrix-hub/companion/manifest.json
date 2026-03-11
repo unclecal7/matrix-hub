@@ -1,0 +1,26 @@
+{
+	"$schema": "https://raw.githubusercontent.com/bitfocus/companion-module-base/main/assets/manifest.schema.json",
+	"id": "matrix-hub",
+	"name": "matrix-hub",
+	"shortname": "Matrix Hub",
+	"description": "Control Matrix Hub video routing — Videohub, ATEM, and more",
+	"version": "0.0.0",
+	"license": "MIT",
+	"repository": "",
+	"bugs": "",
+	"maintainers": [
+		{
+			"name": "Kyle Hogan"
+		}
+	],
+	"legacyIds": [],
+	"runtime": {
+		"type": "node22",
+		"api": "nodejs-ipc",
+		"apiVersion": "1.14.1",
+		"entrypoint": "../dist/main.js"
+	},
+	"manufacturer": "Matrix Hub",
+	"products": ["Matrix Hub"],
+	"keywords": ["video", "routing", "videohub", "atem", "matrix"]
+}

@@ -1,0 +1,92 @@
+{
+  "name": "matrix-hub",
+  "version": "1.0.0",
+  "description": "Matrix Hub - Unified broadcast routing controller",
+  "main": "dist/main/main/main.js",
+  "scripts": {
+    "start": "tsx src/server/main.ts",
+    "dev": "vite",
+    "build": "vite build",
+    "build:main": "tsc -p src/main/tsconfig.json",
+    "build:all": "npm run build && npm run build:main",
+    "electron:rebuild": "electron-rebuild -f -o better-sqlite3",
+    "electron:dev": "npm run build:all && npm run electron:rebuild && electron dist/main/main/main.js",
+    "package:mac": "npm run build:all && electron-builder --mac --arm64",
+    "start:prod": "NODE_ENV=production tsx src/server/main.ts",
+    "simulate:videohub": "tsx tests/simulator/videohub-simulator.ts",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "lint": "eslint src/",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+  },
+  "dependencies": {
+    "@fastify/cors": "^10.0.0",
+    "@fastify/static": "^8.0.0",
+    "@fastify/websocket": "^11.2.0",
+    "@tanstack/react-virtual": "^3.13.19",
+    "atem-connection": "^3.6.0",
+    "better-sqlite3": "^12.6.2",
+    "bonjour-service": "^1.3.0",
+    "fast-xml-parser": "^5.4.2",
+    "fastify": "^5.0.0",
+    "osc": "^2.4.5",
+    "ws": "^8.18.0",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/ws": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
+    "@typescript-eslint/parser": "^8.56.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "electron": "^33.4.11",
+    "electron-builder": "^25.0.0",
+    "electron-rebuild": "^3.2.0",
+    "eslint": "^10.0.2",
+    "eslint-config-prettier": "^10.1.8",
+    "jsdom": "^28.1.0",
+    "prettier": "^3.8.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0",
+    "vitest": "^4.0.18"
+  },
+  "build": {
+    "appId": "com.matrixhub.app",
+    "productName": "Matrix Hub",
+    "npmRebuild": false,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "**/better-sqlite3/**"
+    ],
+    "mac": {
+      "icon": "build/icons/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": "arm64"
+        }
+      ],
+      "category": "public.app-category.utilities",
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist"
+    },
+    "dmg": {
+      "title": "Matrix Hub"
+    }
+  }
+}
