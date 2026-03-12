@@ -120,3 +120,4 @@ npm run package:mac
 
 Did you find a bug or have a great idea for a new feature? 
 Please [open an Issue on GitHub](https://github.com/unclecal7/matrix-hub/issues) to let me know!
+
